@@ -1,6 +1,7 @@
 {
     "name": "viewer/sysview",
     "description": "le package permet de generate les views automation en fonction du layouts",
+    "keywords": ["view", "generate", "generate view"],
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -17,8 +18,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.0.0",
-        "afrazahmad/clear-cached-data": "^1.0"
+        "php": ">=7.0.0"
     },
     "extra": {
         "laravel": {
