@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Viewer\\Sysview\\' => array($baseDir . '/src'),
+    'App\\' => array($baseDir . '/app'),
 );
