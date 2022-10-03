@@ -11,15 +11,19 @@
     },
     "authors": [
         {
-            "name": "Paki leonel"
+            "name": "Paki leonel",
+            "email": "pakileonel1@gmail.com"
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=7.0.0",
+        "afrazahmad/clear-cached-data": "^1.0"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "wisdmlabs\\viewer\\SysviewServiceProvider"
+                "viewer\\SysviewServiceProvider"
             ]
         }
     }
