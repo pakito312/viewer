@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "viewer\\SysviewServiceProvider"
+                "sysview\\SysviewServiceProvider"
             ]
         }
     }
