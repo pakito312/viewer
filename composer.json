@@ -3,6 +3,7 @@
     "description": "le package permet de generate les views automation en fonction du layouts",
     "keywords": ["view", "generate", "generate view"],
     "type": "library",
+    "homepage": "https://github.com/pakito312/viewer",
     "license": "MIT",
     "autoload": {
         "psr-4": {
