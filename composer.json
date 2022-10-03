@@ -1,0 +1,26 @@
+{
+    "name": "viewer/sysview",
+    "description": "le package permet de generate les views automation en fonction du layouts",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\" : "app/",
+            "Viewer\\Sysview\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Paki leonel"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "wisdmlabs\\viewer\\SysviewServiceProvider"
+            ]
+        }
+    }
+}
