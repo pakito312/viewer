@@ -13,7 +13,7 @@ class MakeViewCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:view {view}';
+    protected $signature = 'make:view {view} {--layout=}';
 
     /**
      * The console command description.
@@ -40,7 +40,7 @@ class MakeViewCommand extends Command
     public function handle()
     {
         $view = $this->argument('view');
-
+        $layout = $this->option('layout');
         $path = $this->viewPath($view);
 
         $this->createDir($path);
@@ -52,7 +52,7 @@ class MakeViewCommand extends Command
         }
 
         File::put($path, $path);
-        $layout=$this->addLayout($view);
+        $layout=$this->addLayout($layout);
         File::put($path, $layout);
 
         $this->info("File {$path} created.");
@@ -88,22 +88,19 @@ class MakeViewCommand extends Command
             mkdir($dir, 0777, true);
         }
     }
-    public function addLayout($wiew)
-    {
-        $path = explode('.', $wiew);
-        if(count($path) > 1)
-        {
-            $name = $path[0];
-            $html="@extends('layouts.{$name}') \n";
-            $html.="@section('content') \n\n\n ";
-            $html.="@endsection";
-        }else
-        {
-            $html="@extends('layouts.front') \n";
-            $html.="@section('content')\n\n\n ";
-            $html.="@endsection";
-        }
-        return $html;
+    public function addLayout($layout){
+
+            if(!empty($layout))
+            {
+                $html="@extends('layouts.{$layout}') \n";
+                $html.="@section('content') \n\n\n ";
+                $html.="@endsection";
+            }else
+            {
+                $html="";
+            }
+            return $html;
+    
     }
 
 }

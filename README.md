@@ -26,6 +26,11 @@ php artisan make:view folder/name_of_view
   - folder matches the name of the folder
   - name_of_view matches the name of the view without the extension
 
+If you want specify layout
+
+```
+php artisan make:view folder/name_of_view --layout=name_of_layout
+```
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
