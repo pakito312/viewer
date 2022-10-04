@@ -2,8 +2,7 @@
 <center>Auteur : Paki leonel</center>
 
 ## About Viewer
-
-
+The package allows to generate the automation views according to the layouts
 ## Installation
 
 Plates is available via Composer:
@@ -15,11 +14,11 @@ composer require viewer/sysview
 
 ## how to use
 
-to use you will run the command
+To use you will run the command
 ```
 php artisan make:view name_of_view
 ```
-if you want to add the view in a specific folder you will run the command
+If you want to add the view in a specific folder you will run the command
 
 ```
 php artisan make:view folder/name_of_view
