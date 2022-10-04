@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Viewer\Sysview;
 
 use Illuminate\Support\ServiceProvider;
+use Viewer\Sysview\Commands\MakeViewCommand;
 
 class SysviewServiceProvider extends ServiceProvider
 {
@@ -15,7 +16,9 @@ class SysviewServiceProvider extends ServiceProvider
     {
         //
     }
-
+    protected $commands=[
+       MakeViewCommand::class
+    ];
     /**
      * Bootstrap services.
      *
@@ -23,8 +26,6 @@ class SysviewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/app/Console/Commands/MakeViewCommand.php' => base_path('app/Console/wisdmlabs/viewer/Commands/MakeViewCommand.php'),
-        ]);
+        $this->commands($this->commands);
     }
 }
