@@ -11,20 +11,12 @@ class ComposerStaticInit5fe197e78794a7a137c2fc13ad7090f9
         array (
             'Viewer\\Sysview\\' => 15,
         ),
-        'A' => 
-        array (
-            'App\\' => 4,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Viewer\\Sysview\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
